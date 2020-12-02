@@ -150,7 +150,7 @@ namespace projekt
 
        private void btnKøber_indlæs_Click(object sender, EventArgs e)
         {
-            //(C)R(UD)
+            //SLETTET
 
 
         }
@@ -260,7 +260,7 @@ namespace projekt
         private void btnsælgerslet_Click(object sender, EventArgs e)
         {
 
-            string S_ID = textBox22.Text;
+            int S_ID = int.Parse(textBox22.Text);
 
             string sSQL = $"DELETE FROM SÆLGER WHERE S_ID = {S_ID}";
             SqlCommand command = new SqlCommand(sSQL, conn);
@@ -278,14 +278,16 @@ namespace projekt
             string B_type = textBox8.Text;
             int B_værelser = int.Parse(textBox9.Text);
             int udbuds_pris = int.Parse(textBox10.Text);
-            int S_ID = int.Parse(textBox11.Text);
-            int EID = int.Parse(textBox12.Text);
             int Handels_pris = int.Parse(textBox13.Text);
             string Handels_dato = textBox14.Text;
-           // string B_Status = radioButton1.
-
+            int B_Status = radioButton1.Checked ? 0 : 1;
+            int EID = int.Parse(textBox12.Text);
+            int S_ID = int.Parse(textBox11.Text);
+            
+                                 
             string sSQL = "INSERT INTO BOLIG VALUES( " + B_ID + ", " + B_Areal + ", '" + B_Gadenavn + "', " + B_Gade_nr + ", " + B_postnummer
-                                                        + ", '" + B_type + "', " + B_værelser + ", " + udbuds_pris + "," + S_ID + "," + EID + ", " + Handels_pris + ", '" + Handels_dato + "')";
+                                                        + ", '" + B_type + "', " + B_værelser + ", " + udbuds_pris + ", " + Handels_pris + ", '" + Handels_dato + "', " + B_Status + ", " + EID + ", " + S_ID + " )";
+
 
             MessageBox.Show(sSQL);
 
@@ -304,20 +306,30 @@ namespace projekt
 
         private void btnboligopdater_Click(object sender, EventArgs e)
         {
-            int Handelspris = int.Parse(textBox13.Text);
-            int S_ID = int.Parse(textBox11.Text);
 
-            string sSQL = $"UPDATE BOLIG SET Handels_pris= {Handelspris} WHERE S_ID = {S_ID}; ";
-            SqlCommand command = new SqlCommand(sSQL, conn);
-            MessageBox.Show(sSQL);
-            command.ExecuteNonQuery();
+            try { 
+            int Handelspris = int.Parse(textBox13.Text);
+            int SÆLGER_id = int.Parse(textBox11.Text);
+
+            
+           
+                string sSQL = $"UPDATE BOLIG SET Handels_pris= {Handelspris} WHERE SÆLGER_ID = {SÆLGER_id}; ";
+                SqlCommand command = new SqlCommand(sSQL, conn);
+
+                MessageBox.Show(sSQL);
+                command.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Kun handelspris kan ændres.");
+            }
         }
 
         private void btnboligslet_Click(object sender, EventArgs e)
         {
-            string S_ID = textBox11.Text;
+            int SÆLGER_ID = int.Parse(textBox11.Text);
 
-            string sSQL = $"DELETE FROM BOLIG WHERE S_ID = {S_ID}";
+            string sSQL = $"DELETE FROM BOLIG WHERE SÆLGER_ID = {SÆLGER_ID}";
             SqlCommand command = new SqlCommand(sSQL, conn);
             command.ExecuteNonQuery();
         }
@@ -338,9 +350,10 @@ namespace projekt
             string K_Fornavn = textBox32.Text;
             string K_Efternavn = textBox31.Text;
             int K_ID = int.Parse(textBox25.Text);
+            int K_Tlf_nr = int.Parse(textBox26.Text);
 
 
-            string sSQL = $"UPDATE KØBER SET K_Fornavn='{K_Fornavn}' WHERE S_ID = {K_ID}; UPDATE KØBER SET K_Efternavn='{K_Efternavn}' WHERE S_ID = {K_ID}";
+            string sSQL = $"UPDATE KØBER SET K_Fornavn='{K_Fornavn}' WHERE K_ID = {K_ID}; UPDATE KØBER SET K_Efternavn='{K_Efternavn}' WHERE K_ID = {K_ID}; UPDATE KØBER SET K_Tlf_nr= {K_Tlf_nr} WHERE K_ID = {K_ID}";
             SqlCommand command = new SqlCommand(sSQL, conn);
             MessageBox.Show(sSQL);
             command.ExecuteNonQuery();
@@ -349,11 +362,39 @@ namespace projekt
         private void btnkøberslet_Click(object sender, EventArgs e)
         {
 
-            string K_ID = textBox25.Text;
+            int K_ID = int.Parse(textBox25.Text);
 
             string sSQL = $"DELETE FROM KØBER WHERE K_ID = {K_ID}";
             SqlCommand command = new SqlCommand(sSQL, conn);
             command.ExecuteNonQuery();
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form1_Load(sender, e);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form1_Load(sender, e);
+        }
+
+        private void btnVisBoliger_Click(object sender, EventArgs e)
+        {
+           
+            int B_Postnummer = int.Parse(textBox33.Text);
+            string Output = "";
+            string sSQL = "SELECT B_ID, B_Areal, B_Gadenavn, B_Gade_nr, udbuds_pris, SÆLGER_ID FROM BOLIG WHERE B_Postnummer=" + B_Postnummer;
+            SqlCommand command = new SqlCommand(sSQL, conn);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Output = Output + reader.GetValue(0) + "  " +  reader.GetValue(1) +"  " +  reader.GetValue(2) + " " + reader.GetValue(3) + "   " + reader.GetValue(4) + " \t " + reader.GetValue(5) + "\n";
+            }
+            MessageBox.Show(Output);
+            reader.Close();
         }
     }
 }
