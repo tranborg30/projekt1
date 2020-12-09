@@ -44,7 +44,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.boligbox = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -91,6 +90,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.sælgerbox = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.sFornavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -144,7 +144,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.textBox29 = new System.Windows.Forms.TextBox();
             this.textBox30 = new System.Windows.Forms.TextBox();
@@ -157,36 +156,34 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
+            this.textBox27 = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.statistikbox = new System.Windows.Forms.GroupBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.ØnsketSøgePris = new System.Windows.Forms.TextBox();
+            this.btnSøg = new System.Windows.Forms.Button();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.txtTilDato = new System.Windows.Forms.TextBox();
+            this.txtFraDato = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.btnVisBoliger = new System.Windows.Forms.Button();
+            this.txtFraTal = new System.Windows.Forms.TextBox();
             this.btnKonverter = new System.Windows.Forms.Button();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.txtFraRomertal = new System.Windows.Forms.TextBox();
             this.textBox33 = new System.Windows.Forms.TextBox();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.button15 = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
-            this.button14 = new System.Windows.Forms.Button();
+            this.txtTilTal = new System.Windows.Forms.TextBox();
+            this.txtTilRomertal = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.kØBERTableAdapter = new projekt.semesterprojekt1DataSetTableAdapters.KØBERTableAdapter();
             this.sÆLGERTableAdapter = new projekt.semesterprojekt1DataSetTableAdapters.SÆLGERTableAdapter();
             this.bOLIGTableAdapter = new projekt.semesterprojekt1DataSetTableAdapters.BOLIGTableAdapter();
-            this.btnVisBoliger = new System.Windows.Forms.Button();
-            this.bIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bArealDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bGadenavnDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bGadenrDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bPostnummerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bværelserDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.udbudsprisDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.handelsprisDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.handelsdatoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bStatusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eIDDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sælgerIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.forsidebox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -201,7 +198,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kØBERBindingSource)).BeginInit();
             this.statistikbox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -343,7 +339,6 @@
             // boligbox
             // 
             this.boligbox.BackColor = System.Drawing.SystemColors.Window;
-            this.boligbox.Controls.Add(this.button6);
             this.boligbox.Controls.Add(this.label17);
             this.boligbox.Controls.Add(this.label16);
             this.boligbox.Controls.Add(this.label15);
@@ -375,21 +370,12 @@
             this.boligbox.Controls.Add(this.textBox5);
             this.boligbox.Controls.Add(this.textBox4);
             this.boligbox.Controls.Add(this.textBox3);
+            this.boligbox.Controls.Add(this.button6);
             this.boligbox.Location = new System.Drawing.Point(150, 79);
             this.boligbox.Name = "boligbox";
             this.boligbox.Size = new System.Drawing.Size(1024, 493);
             this.boligbox.TabIndex = 9;
             this.boligbox.TabStop = false;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(890, 243);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(128, 60);
-            this.button6.TabIndex = 44;
-            this.button6.Text = "SORTER EFTER PRIS";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label17
             // 
@@ -648,6 +634,7 @@
             this.btnboligslet.Text = "SLET";
             this.btnboligslet.UseVisualStyleBackColor = true;
             this.btnboligslet.Click += new System.EventHandler(this.btnboligslet_Click);
+            this.btnboligslet.MouseHover += new System.EventHandler(this.btnboligslet_MouseHover);
             // 
             // btnboligopdater
             // 
@@ -658,6 +645,7 @@
             this.btnboligopdater.Text = "OPDATER";
             this.btnboligopdater.UseVisualStyleBackColor = true;
             this.btnboligopdater.Click += new System.EventHandler(this.btnboligopdater_Click);
+            this.btnboligopdater.MouseHover += new System.EventHandler(this.btnboligopdater_MouseHover);
             // 
             // btnboligopret
             // 
@@ -783,6 +771,16 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(147, 22);
             this.textBox3.TabIndex = 8;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(890, 243);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(128, 60);
+            this.button6.TabIndex = 44;
+            this.button6.Text = "SORTER EFTER PRIS";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // sælgerbox
             // 
@@ -933,6 +931,7 @@
             this.btnsælgeropdater.Text = "OPDATER";
             this.btnsælgeropdater.UseVisualStyleBackColor = true;
             this.btnsælgeropdater.Click += new System.EventHandler(this.btnsælgeropdater_Click);
+            this.btnsælgeropdater.MouseHover += new System.EventHandler(this.btnsælgeropdater_MouseHover);
             // 
             // btnsælgeropret
             // 
@@ -1096,11 +1095,9 @@
             this.køberbox.Controls.Add(this.btnkøberopdater);
             this.køberbox.Controls.Add(this.btnkøberopret);
             this.køberbox.Controls.Add(this.textBox24);
-            this.køberbox.Controls.Add(this.textBox25);
             this.køberbox.Controls.Add(this.label26);
             this.køberbox.Controls.Add(this.label27);
             this.køberbox.Controls.Add(this.textBox26);
-            this.køberbox.Controls.Add(this.textBox27);
             this.køberbox.Controls.Add(this.textBox28);
             this.køberbox.Controls.Add(this.textBox29);
             this.køberbox.Controls.Add(this.textBox30);
@@ -1113,6 +1110,8 @@
             this.køberbox.Controls.Add(this.label32);
             this.køberbox.Controls.Add(this.label33);
             this.køberbox.Controls.Add(this.label34);
+            this.køberbox.Controls.Add(this.textBox27);
+            this.køberbox.Controls.Add(this.textBox25);
             this.køberbox.Location = new System.Drawing.Point(150, 83);
             this.køberbox.Name = "køberbox";
             this.køberbox.Size = new System.Drawing.Size(1024, 485);
@@ -1237,6 +1236,7 @@
             this.btnkøberopdater.Text = "OPDATER";
             this.btnkøberopdater.UseVisualStyleBackColor = true;
             this.btnkøberopdater.Click += new System.EventHandler(this.btnkøberopdater_Click);
+            this.btnkøberopdater.MouseHover += new System.EventHandler(this.btnkøberopdater_MouseHover);
             // 
             // btnkøberopret
             // 
@@ -1286,13 +1286,6 @@
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(147, 22);
             this.textBox26.TabIndex = 45;
-            // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(433, 20);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(147, 22);
-            this.textBox27.TabIndex = 44;
             // 
             // textBox28
             // 
@@ -1392,6 +1385,13 @@
             this.label34.TabIndex = 32;
             this.label34.Text = "Fornavn";
             // 
+            // textBox27
+            // 
+            this.textBox27.Location = new System.Drawing.Point(433, 20);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(147, 22);
+            this.textBox27.TabIndex = 44;
+            // 
             // btnRefresh
             // 
             this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
@@ -1406,120 +1406,205 @@
             // statistikbox
             // 
             this.statistikbox.BackColor = System.Drawing.SystemColors.Window;
+            this.statistikbox.Controls.Add(this.label43);
+            this.statistikbox.Controls.Add(this.label42);
+            this.statistikbox.Controls.Add(this.label41);
+            this.statistikbox.Controls.Add(this.ØnsketSøgePris);
+            this.statistikbox.Controls.Add(this.btnSøg);
+            this.statistikbox.Controls.Add(this.label40);
+            this.statistikbox.Controls.Add(this.label39);
+            this.statistikbox.Controls.Add(this.txtTilDato);
+            this.statistikbox.Controls.Add(this.txtFraDato);
+            this.statistikbox.Controls.Add(this.label38);
+            this.statistikbox.Controls.Add(this.label37);
+            this.statistikbox.Controls.Add(this.label36);
             this.statistikbox.Controls.Add(this.btnVisBoliger);
-            this.statistikbox.Controls.Add(this.textBox37);
-            this.statistikbox.Controls.Add(this.textBox36);
+            this.statistikbox.Controls.Add(this.txtFraTal);
             this.statistikbox.Controls.Add(this.btnKonverter);
-            this.statistikbox.Controls.Add(this.textBox35);
-            this.statistikbox.Controls.Add(this.textBox34);
+            this.statistikbox.Controls.Add(this.txtFraRomertal);
             this.statistikbox.Controls.Add(this.textBox33);
-            this.statistikbox.Controls.Add(this.dataGridView4);
-            this.statistikbox.Controls.Add(this.button15);
             this.statistikbox.Controls.Add(this.label35);
-            this.statistikbox.Controls.Add(this.button14);
+            this.statistikbox.Controls.Add(this.txtTilTal);
+            this.statistikbox.Controls.Add(this.txtTilRomertal);
             this.statistikbox.Location = new System.Drawing.Point(150, 81);
             this.statistikbox.Name = "statistikbox";
             this.statistikbox.Size = new System.Drawing.Size(1035, 489);
             this.statistikbox.TabIndex = 12;
             this.statistikbox.TabStop = false;
             // 
-            // textBox37
+            // label43
             // 
-            this.textBox37.Location = new System.Drawing.Point(300, 241);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(100, 22);
-            this.textBox37.TabIndex = 9;
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(305, 31);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(106, 17);
+            this.label43.TabIndex = 22;
+            this.label43.Text = "Konvertering:";
             // 
-            // textBox36
+            // label42
             // 
-            this.textBox36.Location = new System.Drawing.Point(300, 190);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(100, 22);
-            this.textBox36.TabIndex = 8;
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(741, 39);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(215, 17);
+            this.label42.TabIndex = 21;
+            this.label42.Text = "Find bolig efter dato og pris:";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(738, 155);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(115, 17);
+            this.label41.TabIndex = 20;
+            this.label41.Text = "Ønsket søgepris:";
+            this.label41.Click += new System.EventHandler(this.label41_Click);
+            // 
+            // ØnsketSøgePris
+            // 
+            this.ØnsketSøgePris.Location = new System.Drawing.Point(741, 173);
+            this.ØnsketSøgePris.Name = "ØnsketSøgePris";
+            this.ØnsketSøgePris.Size = new System.Drawing.Size(100, 22);
+            this.ØnsketSøgePris.TabIndex = 19;
+            // 
+            // btnSøg
+            // 
+            this.btnSøg.Location = new System.Drawing.Point(895, 168);
+            this.btnSøg.Name = "btnSøg";
+            this.btnSøg.Size = new System.Drawing.Size(63, 30);
+            this.btnSøg.TabIndex = 18;
+            this.btnSøg.Text = "Søg";
+            this.btnSøg.UseVisualStyleBackColor = true;
+            this.btnSøg.Click += new System.EventHandler(this.btnSøg_Click);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(855, 92);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(59, 17);
+            this.label40.TabIndex = 17;
+            this.label40.Text = "Til dato:";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(738, 91);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(65, 17);
+            this.label39.TabIndex = 16;
+            this.label39.Text = "Fra dato:";
+            // 
+            // txtTilDato
+            // 
+            this.txtTilDato.Location = new System.Drawing.Point(858, 113);
+            this.txtTilDato.Name = "txtTilDato";
+            this.txtTilDato.Size = new System.Drawing.Size(100, 22);
+            this.txtTilDato.TabIndex = 15;
+            // 
+            // txtFraDato
+            // 
+            this.txtFraDato.Location = new System.Drawing.Point(741, 112);
+            this.txtFraDato.Name = "txtFraDato";
+            this.txtFraDato.Size = new System.Drawing.Size(100, 22);
+            this.txtFraDato.TabIndex = 14;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(527, 87);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(77, 17);
+            this.label38.TabIndex = 13;
+            this.label38.Text = "Indtast tal: ";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(302, 87);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(110, 17);
+            this.label37.TabIndex = 12;
+            this.label37.Text = "Indtast romertal:";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(22, 31);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(182, 17);
+            this.label36.TabIndex = 11;
+            this.label36.Text = "Find bolig efter område:";
+            // 
+            // btnVisBoliger
+            // 
+            this.btnVisBoliger.Location = new System.Drawing.Point(25, 138);
+            this.btnVisBoliger.Name = "btnVisBoliger";
+            this.btnVisBoliger.Size = new System.Drawing.Size(133, 57);
+            this.btnVisBoliger.TabIndex = 10;
+            this.btnVisBoliger.Text = "Udskriv boliger til tekstfil\r\n";
+            this.btnVisBoliger.UseVisualStyleBackColor = true;
+            this.btnVisBoliger.Click += new System.EventHandler(this.btnVisBoliger_Click);
+            // 
+            // txtFraTal
+            // 
+            this.txtFraTal.Location = new System.Drawing.Point(530, 112);
+            this.txtFraTal.Name = "txtFraTal";
+            this.txtFraTal.Size = new System.Drawing.Size(100, 22);
+            this.txtFraTal.TabIndex = 8;
             // 
             // btnKonverter
             // 
-            this.btnKonverter.Location = new System.Drawing.Point(187, 207);
+            this.btnKonverter.Location = new System.Drawing.Point(422, 131);
             this.btnKonverter.Name = "btnKonverter";
             this.btnKonverter.Size = new System.Drawing.Size(90, 46);
             this.btnKonverter.TabIndex = 7;
             this.btnKonverter.Text = "Konverter tal";
             this.btnKonverter.UseVisualStyleBackColor = true;
+            this.btnKonverter.Click += new System.EventHandler(this.btnKonverter_Click);
             // 
-            // textBox35
+            // txtFraRomertal
             // 
-            this.textBox35.Location = new System.Drawing.Point(58, 241);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(100, 22);
-            this.textBox35.TabIndex = 6;
-            // 
-            // textBox34
-            // 
-            this.textBox34.Location = new System.Drawing.Point(58, 191);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(100, 22);
-            this.textBox34.TabIndex = 5;
+            this.txtFraRomertal.Location = new System.Drawing.Point(303, 112);
+            this.txtFraRomertal.Name = "txtFraRomertal";
+            this.txtFraRomertal.Size = new System.Drawing.Size(100, 22);
+            this.txtFraRomertal.TabIndex = 5;
             // 
             // textBox33
             // 
-            this.textBox33.Location = new System.Drawing.Point(58, 72);
+            this.textBox33.Location = new System.Drawing.Point(25, 108);
             this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(219, 22);
+            this.textBox33.Size = new System.Drawing.Size(133, 22);
             this.textBox33.TabIndex = 4;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.AutoGenerateColumns = false;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bIDDataGridViewTextBoxColumn1,
-            this.bArealDataGridViewTextBoxColumn1,
-            this.bGadenavnDataGridViewTextBoxColumn1,
-            this.bGadenrDataGridViewTextBoxColumn1,
-            this.bPostnummerDataGridViewTextBoxColumn1,
-            this.btypeDataGridViewTextBoxColumn1,
-            this.bværelserDataGridViewTextBoxColumn1,
-            this.udbudsprisDataGridViewTextBoxColumn1,
-            this.handelsprisDataGridViewTextBoxColumn1,
-            this.handelsdatoDataGridViewTextBoxColumn1,
-            this.bStatusDataGridViewTextBoxColumn1,
-            this.eIDDataGridViewTextBoxColumn3,
-            this.sælgerIDDataGridViewTextBoxColumn1});
-            this.dataGridView4.DataSource = this.bOLIGBindingSource;
-            this.dataGridView4.Location = new System.Drawing.Point(0, 342);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(1023, 134);
-            this.dataGridView4.TabIndex = 3;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(161, 100);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(116, 43);
-            this.button15.TabIndex = 2;
-            this.button15.Text = "Udskriv til tekstfil";
-            this.button15.UseVisualStyleBackColor = true;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(55, 52);
+            this.label35.Location = new System.Drawing.Point(22, 86);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(136, 17);
             this.label35.TabIndex = 1;
             this.label35.Text = "Indtast postnummer:";
             // 
-            // button14
+            // txtTilTal
             // 
-            this.button14.Location = new System.Drawing.Point(828, 73);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(179, 71);
-            this.button14.TabIndex = 0;
-            this.button14.Text = "Statistik over solgte boliger";
-            this.button14.UseVisualStyleBackColor = true;
+            this.txtTilTal.Location = new System.Drawing.Point(304, 172);
+            this.txtTilTal.Name = "txtTilTal";
+            this.txtTilTal.Size = new System.Drawing.Size(100, 22);
+            this.txtTilTal.TabIndex = 6;
+            // 
+            // txtTilRomertal
+            // 
+            this.txtTilRomertal.Location = new System.Drawing.Point(530, 173);
+            this.txtTilRomertal.Name = "txtTilRomertal";
+            this.txtTilRomertal.Size = new System.Drawing.Size(100, 22);
+            this.txtTilRomertal.TabIndex = 9;
             // 
             // button5
             // 
@@ -1545,119 +1630,9 @@
             // 
             this.bOLIGTableAdapter.ClearBeforeFill = true;
             // 
-            // btnVisBoliger
+            // toolTip1
             // 
-            this.btnVisBoliger.Location = new System.Drawing.Point(58, 99);
-            this.btnVisBoliger.Name = "btnVisBoliger";
-            this.btnVisBoliger.Size = new System.Drawing.Size(97, 43);
-            this.btnVisBoliger.TabIndex = 10;
-            this.btnVisBoliger.Text = "Vis boliger";
-            this.btnVisBoliger.UseVisualStyleBackColor = true;
-            this.btnVisBoliger.Click += new System.EventHandler(this.btnVisBoliger_Click);
-            // 
-            // bIDDataGridViewTextBoxColumn1
-            // 
-            this.bIDDataGridViewTextBoxColumn1.DataPropertyName = "B_ID";
-            this.bIDDataGridViewTextBoxColumn1.HeaderText = "B_ID";
-            this.bIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bIDDataGridViewTextBoxColumn1.Name = "bIDDataGridViewTextBoxColumn1";
-            this.bIDDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // bArealDataGridViewTextBoxColumn1
-            // 
-            this.bArealDataGridViewTextBoxColumn1.DataPropertyName = "B_Areal";
-            this.bArealDataGridViewTextBoxColumn1.HeaderText = "B_Areal";
-            this.bArealDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bArealDataGridViewTextBoxColumn1.Name = "bArealDataGridViewTextBoxColumn1";
-            this.bArealDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // bGadenavnDataGridViewTextBoxColumn1
-            // 
-            this.bGadenavnDataGridViewTextBoxColumn1.DataPropertyName = "B_Gadenavn";
-            this.bGadenavnDataGridViewTextBoxColumn1.HeaderText = "B_Gadenavn";
-            this.bGadenavnDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bGadenavnDataGridViewTextBoxColumn1.Name = "bGadenavnDataGridViewTextBoxColumn1";
-            this.bGadenavnDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // bGadenrDataGridViewTextBoxColumn1
-            // 
-            this.bGadenrDataGridViewTextBoxColumn1.DataPropertyName = "B_Gade_nr";
-            this.bGadenrDataGridViewTextBoxColumn1.HeaderText = "B_Gade_nr";
-            this.bGadenrDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bGadenrDataGridViewTextBoxColumn1.Name = "bGadenrDataGridViewTextBoxColumn1";
-            this.bGadenrDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // bPostnummerDataGridViewTextBoxColumn1
-            // 
-            this.bPostnummerDataGridViewTextBoxColumn1.DataPropertyName = "B_Postnummer";
-            this.bPostnummerDataGridViewTextBoxColumn1.HeaderText = "B_Postnummer";
-            this.bPostnummerDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bPostnummerDataGridViewTextBoxColumn1.Name = "bPostnummerDataGridViewTextBoxColumn1";
-            this.bPostnummerDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // btypeDataGridViewTextBoxColumn1
-            // 
-            this.btypeDataGridViewTextBoxColumn1.DataPropertyName = "B_type";
-            this.btypeDataGridViewTextBoxColumn1.HeaderText = "B_type";
-            this.btypeDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.btypeDataGridViewTextBoxColumn1.Name = "btypeDataGridViewTextBoxColumn1";
-            this.btypeDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // bværelserDataGridViewTextBoxColumn1
-            // 
-            this.bværelserDataGridViewTextBoxColumn1.DataPropertyName = "B_værelser";
-            this.bværelserDataGridViewTextBoxColumn1.HeaderText = "B_værelser";
-            this.bværelserDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bværelserDataGridViewTextBoxColumn1.Name = "bværelserDataGridViewTextBoxColumn1";
-            this.bværelserDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // udbudsprisDataGridViewTextBoxColumn1
-            // 
-            this.udbudsprisDataGridViewTextBoxColumn1.DataPropertyName = "Udbuds_pris";
-            this.udbudsprisDataGridViewTextBoxColumn1.HeaderText = "Udbuds_pris";
-            this.udbudsprisDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.udbudsprisDataGridViewTextBoxColumn1.Name = "udbudsprisDataGridViewTextBoxColumn1";
-            this.udbudsprisDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // handelsprisDataGridViewTextBoxColumn1
-            // 
-            this.handelsprisDataGridViewTextBoxColumn1.DataPropertyName = "Handels_pris";
-            this.handelsprisDataGridViewTextBoxColumn1.HeaderText = "Handels_pris";
-            this.handelsprisDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.handelsprisDataGridViewTextBoxColumn1.Name = "handelsprisDataGridViewTextBoxColumn1";
-            this.handelsprisDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // handelsdatoDataGridViewTextBoxColumn1
-            // 
-            this.handelsdatoDataGridViewTextBoxColumn1.DataPropertyName = "Handels_dato";
-            this.handelsdatoDataGridViewTextBoxColumn1.HeaderText = "Handels_dato";
-            this.handelsdatoDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.handelsdatoDataGridViewTextBoxColumn1.Name = "handelsdatoDataGridViewTextBoxColumn1";
-            this.handelsdatoDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // bStatusDataGridViewTextBoxColumn1
-            // 
-            this.bStatusDataGridViewTextBoxColumn1.DataPropertyName = "B_Status";
-            this.bStatusDataGridViewTextBoxColumn1.HeaderText = "B_Status";
-            this.bStatusDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bStatusDataGridViewTextBoxColumn1.Name = "bStatusDataGridViewTextBoxColumn1";
-            this.bStatusDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // eIDDataGridViewTextBoxColumn3
-            // 
-            this.eIDDataGridViewTextBoxColumn3.DataPropertyName = "EID";
-            this.eIDDataGridViewTextBoxColumn3.HeaderText = "EID";
-            this.eIDDataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.eIDDataGridViewTextBoxColumn3.Name = "eIDDataGridViewTextBoxColumn3";
-            this.eIDDataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // sælgerIDDataGridViewTextBoxColumn1
-            // 
-            this.sælgerIDDataGridViewTextBoxColumn1.DataPropertyName = "Sælger_ID";
-            this.sælgerIDDataGridViewTextBoxColumn1.HeaderText = "Sælger_ID";
-            this.sælgerIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.sælgerIDDataGridViewTextBoxColumn1.Name = "sælgerIDDataGridViewTextBoxColumn1";
-            this.sælgerIDDataGridViewTextBoxColumn1.Width = 125;
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // Form1
             // 
@@ -1672,11 +1647,11 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.statistikbox);
-            this.Controls.Add(this.køberbox);
             this.Controls.Add(this.sælgerbox);
             this.Controls.Add(this.forsidebox);
             this.Controls.Add(this.boligbox);
+            this.Controls.Add(this.statistikbox);
+            this.Controls.Add(this.køberbox);
             this.Name = "Form1";
             this.Text = "REALBOLIG A/S";
             this.Load += new System.EventHandler(this.Form1_Load_1);
@@ -1699,7 +1674,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kØBERBindingSource)).EndInit();
             this.statistikbox.ResumeLayout(false);
             this.statistikbox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1798,17 +1772,14 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.TextBox textBox36;
+        private System.Windows.Forms.TextBox txtTilRomertal;
+        private System.Windows.Forms.TextBox txtFraTal;
         private System.Windows.Forms.Button btnKonverter;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox34;
+        private System.Windows.Forms.TextBox txtTilTal;
+        private System.Windows.Forms.TextBox txtFraRomertal;
         private semesterprojekt1DataSet semesterprojekt1DataSet;
         private System.Windows.Forms.BindingSource kØBERBindingSource;
         private semesterprojekt1DataSetTableAdapters.KØBERTableAdapter kØBERTableAdapter;
@@ -1850,19 +1821,19 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnVisBoliger;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bArealDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bGadenavnDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bGadenrDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bPostnummerDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn btypeDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bværelserDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn udbudsprisDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn handelsprisDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn handelsdatoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bStatusDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eIDDataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sælgerIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Button btnSøg;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox txtTilDato;
+        private System.Windows.Forms.TextBox txtFraDato;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox ØnsketSøgePris;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
