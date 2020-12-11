@@ -88,6 +88,8 @@ namespace projekt
      
         private void Form1_Load_1(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'semesterprojekt1DataSet1.BOLIG' table. You can move, or remove it, as needed.
+            this.bOLIGTableAdapter1.Fill(this.semesterprojekt1DataSet1.BOLIG);
             // TODO: This line of code loads data into the 'semesterprojekt1DataSet.BOLIG' table. You can move, or remove it, as needed.
             this.bOLIGTableAdapter.Fill(this.semesterprojekt1DataSet.BOLIG);
             // TODO: This line of code loads data into the 'semesterprojekt1DataSet.SÆLGER' table. You can move, or remove it, as needed.
@@ -191,10 +193,11 @@ namespace projekt
             int B_Status = radioButton1.Checked ? 0 : 1;
             int EID = int.Parse(textBox12.Text);
             int S_ID = int.Parse(textBox11.Text);
+            int K_ID = int.Parse(textBox34.Text);
 
 
             string sSQL = "INSERT INTO BOLIG VALUES( " + B_ID + ", " + B_Areal + ", '" + B_Gadenavn + "', " + B_Gade_nr + ", " + B_postnummer
-                                                        + ", '" + B_type + "', " + B_værelser + ", " + udbuds_pris + ", " + Handels_pris + ", '" + Handels_dato + "', " + B_Status + ", " + EID + ", " + S_ID + " )";
+                                                        + ", '" + B_type + "', " + B_værelser + ", " + udbuds_pris + ", " + Handels_pris + ", '" + Handels_dato + "', " + B_Status + ", " + EID + ", " + S_ID + ", " + K_ID + " )";
 
             MessageBox.Show(sSQL);
 
@@ -233,7 +236,7 @@ namespace projekt
 
            
 
-            DialogResult Result = MessageBox.Show($"Vil du slette bolig med ID {B_ID} ?", "Er du sikker?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult Result = MessageBox.Show($"Vil du slette bolig med ID {B_ID} ?", "Slet bolig", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Result == DialogResult.Yes)
             { 
                 string sSQL = $"DELETE FROM BOLIG WHERE B_ID = {B_ID}";
@@ -297,15 +300,19 @@ namespace projekt
         private void btnkøberslet_Click(object sender, EventArgs e)
         {
             try
-            {
-                int K_ID = int.Parse(textBox25.Text);
+            {  int K_ID = int.Parse(textBox25.Text);
+
+                DialogResult Result = MessageBox.Show($"Vil du slette Køber med ID {K_ID} ?", "Slet køber", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Result == DialogResult.Yes)
+                {
 
                 string sSQL = $"DELETE FROM KØBER WHERE K_ID = {K_ID}";
                 SqlCommand command = new SqlCommand(sSQL, conn);
                 command.ExecuteNonQuery();
                 MessageBox.Show($"Køber med ID {K_ID} er blevet slettet");
-
-
+                   
+                }
+               
             }
             catch (Exception)
             {
@@ -313,6 +320,7 @@ namespace projekt
             }
 
         }
+
          // == Statistik over solgte huse med udskrift til text. fil i sorteret reækkefølge efter handelspris ==
        private void button6_Click(object sender, EventArgs e)
         {
