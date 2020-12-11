@@ -140,7 +140,6 @@
             this.btnkøberopdater = new System.Windows.Forms.Button();
             this.btnkøberopret = new System.Windows.Forms.Button();
             this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.textBox26 = new System.Windows.Forms.TextBox();
@@ -157,6 +156,7 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.textBox27 = new System.Windows.Forms.TextBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.statistikbox = new System.Windows.Forms.GroupBox();
             this.label43 = new System.Windows.Forms.Label();
@@ -206,7 +206,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(150, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 61);
+            this.button1.Size = new System.Drawing.Size(204, 61);
             this.button1.TabIndex = 0;
             this.button1.Text = "FORSIDE";
             this.button1.UseVisualStyleBackColor = false;
@@ -217,7 +217,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-43, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 108);
+            this.pictureBox1.Size = new System.Drawing.Size(190, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -1255,13 +1255,6 @@
             this.textBox24.Size = new System.Drawing.Size(147, 22);
             this.textBox24.TabIndex = 49;
             // 
-            // textBox25
-            // 
-            this.textBox25.Location = new System.Drawing.Point(433, 105);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(147, 22);
-            this.textBox25.TabIndex = 48;
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -1391,6 +1384,13 @@
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(147, 22);
             this.textBox27.TabIndex = 44;
+            // 
+            // textBox25
+            // 
+            this.textBox25.Location = new System.Drawing.Point(433, 105);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(147, 22);
+            this.textBox25.TabIndex = 48;
             // 
             // btnRefresh
             // 
@@ -1638,7 +1638,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1188, 569);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.button5);
@@ -1647,11 +1647,12 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.sælgerbox);
             this.Controls.Add(this.forsidebox);
             this.Controls.Add(this.boligbox);
             this.Controls.Add(this.statistikbox);
             this.Controls.Add(this.køberbox);
+            this.Controls.Add(this.sælgerbox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "REALBOLIG A/S";
             this.Load += new System.EventHandler(this.Form1_Load_1);

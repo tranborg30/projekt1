@@ -231,21 +231,19 @@ namespace projekt
         {
             int B_ID = int.Parse(textBox3.Text);
 
-            string sSQL = $"DELETE FROM BOLIG WHERE B_ID = {B_ID}";
-
-            SqlCommand command = new SqlCommand(sSQL, conn);
-            command.ExecuteNonQuery();
+           
 
             DialogResult Result = MessageBox.Show($"Vil du slette bolig med ID {B_ID} ?", "Er du sikker?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Result == DialogResult.Yes)
-            {
+            { 
+                string sSQL = $"DELETE FROM BOLIG WHERE B_ID = {B_ID}";
+
+                SqlCommand command = new SqlCommand(sSQL, conn);
+                command.ExecuteNonQuery();
                 MessageBox.Show($"Bolig med ID {B_ID} er blevet slettet.");
 
             }
-            else if (Result == DialogResult.No)
-            {
-                return;
-            }
+            
         }
 
         // == OPRET KØBER ==
@@ -305,17 +303,8 @@ namespace projekt
                 string sSQL = $"DELETE FROM KØBER WHERE K_ID = {K_ID}";
                 SqlCommand command = new SqlCommand(sSQL, conn);
                 command.ExecuteNonQuery();
+                MessageBox.Show($"Køber med ID {K_ID} er blevet slettet");
 
-                DialogResult Result = MessageBox.Show($"Vil du slette Køber med ID {K_ID} ?", "Er du sikker?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (Result == DialogResult.Yes)
-                {
-                    MessageBox.Show($"Køber med ID {K_ID} er blevet slettet.");
-
-                }
-                else if (Result == DialogResult.No)
-                {
-                    return;
-                }
 
             }
             catch (Exception)
@@ -342,7 +331,9 @@ namespace projekt
 
                 while (reader.Read())
                 {
-                    Output = Output + "B ID:\t\t " + reader.GetValue(0) + "\n" + "Handelspris:\t " + reader.GetValue(1) + "\n" + "Handelsdato:\t " + reader.GetValue(2) + "\n" + "Udbudspris: \t " + reader.GetValue(3) + "\n" + "Gadenavn:\t " + reader.GetValue(4) + "\n" + "Gade Nr:\t " + reader.GetValue(5) + "\n" + "Postnummer:\t " + reader.GetValue(6) + "\n" + "Status:\t\t " + reader.GetValue(7) + "\n" + "Sælger ID:\t " + reader.GetValue(8) + "\n" + "---------------------------" + "\n";
+                    Output = Output + "B ID:\t\t ".PadRight(20) + reader.GetValue(0) + "\t".PadRight(20) + "Handelspris:\t ".PadRight(20) + reader.GetValue(1) + "\t".PadRight(20) + "Handelsdato:\t ".PadRight(20) + reader.GetValue(2) + "\t".PadRight(20) + 
+                                      "Udbudspris: \t ".PadRight(20) + reader.GetValue(3) + "\t".PadRight(20) + "Gadenavn:\t ".PadRight(20) + reader.GetValue(4) + "\t".PadRight(20) + "Gade Nr:\t ".PadRight(20) + reader.GetValue(5) + "\t".PadRight(30) + 
+                                      "Postnummer:\t ".PadRight(20) + reader.GetValue(6) + "\t".PadRight(20) + "Status:\t\t " + reader.GetValue(7) + "\t".PadRight(20) + "Sælger ID:\t ".PadRight(20) + reader.GetValue(8) + "\n" + "---------------------------" + "\n";
 
                 }
 
@@ -627,13 +618,14 @@ namespace projekt
 
         // == SØG BOLIGER EFTER DATO OG HANDELSPRIS ==
         private void btnSøg_Click(object sender, EventArgs e) {
+
             Hus[] huse = new Hus[100];
             int tæller = 0;
             int FraDato = int.Parse(txtFraDato.Text);
             int TilDato = int.Parse(txtTilDato.Text);
             int ønsketPris = int.Parse(ØnsketSøgePris.Text);
             string tekst = "";
-            string sSql = $"SELECT B_ID, B_Gadenavn, B_Gade_nr,Handels_pris, Handels_dato FROM BOLIG WHERE Handels_dato >= {FraDato} AND Handels_dato <= {TilDato};";
+            string sSql = $"SELECT B_ID, B_Gadenavn, B_Gade_nr,Handels_pris, Handels_dato, B_Status FROM BOLIG WHERE Handels_dato >= {FraDato} AND Handels_dato <= {TilDato};";
 
                 SqlCommand command = new SqlCommand(sSql, conn);
                 SqlDataReader reader = command.ExecuteReader();
@@ -641,9 +633,9 @@ namespace projekt
                 
                 while (reader.Read())
                 {
-                huse[tæller] = new Hus(reader.GetInt32(0), reader.GetInt32(3));
+                huse[tæller] = new Hus(reader.GetInt32(0), reader.GetInt32(3), reader.GetInt32(5));
                
-                    if (ønsketPris < huse[tæller].handelsPris){
+                    if (ønsketPris < huse[tæller].handelsPris && huse[tæller].status == 1){
                     tekst = $"{tekst}Bolig ID: {huse[tæller].id} \nSalgspris: {huse[tæller].handelsPris} \n\n";
                     }
 

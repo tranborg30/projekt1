@@ -10,12 +10,14 @@ namespace projekt
     {
         public int id;
         public int handelsPris;
+        public int status;
 
 
-        public Hus(int aId, int aHandelsPris)
+        public Hus(int aId, int aHandelsPris, int aStatus)
         {
             id = aId;
-            handelsPris = aHandelsPris; 
+            handelsPris = aHandelsPris;
+            status = aStatus;
         }
 
 
