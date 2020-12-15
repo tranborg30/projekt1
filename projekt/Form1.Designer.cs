@@ -44,18 +44,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.boligbox = new System.Windows.Forms.GroupBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bArealDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,8 +58,20 @@
             this.bStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eIDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sælgerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bOLIGBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bOLIGBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.semesterprojekt1DataSet = new projekt.semesterprojekt1DataSet();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnboligslet = new System.Windows.Forms.Button();
             this.btnboligopdater = new System.Windows.Forms.Button();
             this.btnboligopret = new System.Windows.Forms.Button();
@@ -140,7 +140,6 @@
             this.btnkøberopdater = new System.Windows.Forms.Button();
             this.btnkøberopret = new System.Windows.Forms.Button();
             this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.textBox26 = new System.Windows.Forms.TextBox();
@@ -157,6 +156,7 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.textBox27 = new System.Windows.Forms.TextBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.statistikbox = new System.Windows.Forms.GroupBox();
             this.label43 = new System.Windows.Forms.Label();
@@ -184,12 +184,14 @@
             this.sÆLGERTableAdapter = new projekt.semesterprojekt1DataSetTableAdapters.SÆLGERTableAdapter();
             this.bOLIGTableAdapter = new projekt.semesterprojekt1DataSetTableAdapters.BOLIGTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.semesterprojekt1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bOLIGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.forsidebox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.boligbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bOLIGBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bOLIGBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.semesterprojekt1DataSet)).BeginInit();
             this.sælgerbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -198,6 +200,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kØBERBindingSource)).BeginInit();
             this.statistikbox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.semesterprojekt1DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bOLIGBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -206,7 +210,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(150, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 61);
+            this.button1.Size = new System.Drawing.Size(204, 61);
             this.button1.TabIndex = 0;
             this.button1.Text = "FORSIDE";
             this.button1.UseVisualStyleBackColor = false;
@@ -217,7 +221,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-43, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 108);
+            this.pictureBox1.Size = new System.Drawing.Size(190, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -339,6 +343,7 @@
             // boligbox
             // 
             this.boligbox.BackColor = System.Drawing.SystemColors.Window;
+            this.boligbox.Controls.Add(this.dataGridView1);
             this.boligbox.Controls.Add(this.label17);
             this.boligbox.Controls.Add(this.label16);
             this.boligbox.Controls.Add(this.label15);
@@ -351,7 +356,6 @@
             this.boligbox.Controls.Add(this.label8);
             this.boligbox.Controls.Add(this.label7);
             this.boligbox.Controls.Add(this.label6);
-            this.boligbox.Controls.Add(this.dataGridView1);
             this.boligbox.Controls.Add(this.btnboligslet);
             this.boligbox.Controls.Add(this.btnboligopdater);
             this.boligbox.Controls.Add(this.btnboligopret);
@@ -376,6 +380,146 @@
             this.boligbox.Size = new System.Drawing.Size(1024, 493);
             this.boligbox.TabIndex = 9;
             this.boligbox.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bIDDataGridViewTextBoxColumn,
+            this.bArealDataGridViewTextBoxColumn,
+            this.bGadenavnDataGridViewTextBoxColumn,
+            this.bGadenrDataGridViewTextBoxColumn,
+            this.bPostnummerDataGridViewTextBoxColumn,
+            this.btypeDataGridViewTextBoxColumn,
+            this.bværelserDataGridViewTextBoxColumn,
+            this.udbudsprisDataGridViewTextBoxColumn,
+            this.handelsprisDataGridViewTextBoxColumn,
+            this.handelsdatoDataGridViewTextBoxColumn,
+            this.bStatusDataGridViewTextBoxColumn,
+            this.eIDDataGridViewTextBoxColumn2,
+            this.sælgerIDDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.bOLIGBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(21, 350);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(997, 143);
+            this.dataGridView1.TabIndex = 45;
+            // 
+            // bIDDataGridViewTextBoxColumn
+            // 
+            this.bIDDataGridViewTextBoxColumn.DataPropertyName = "B_ID";
+            this.bIDDataGridViewTextBoxColumn.HeaderText = "B_ID";
+            this.bIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bIDDataGridViewTextBoxColumn.Name = "bIDDataGridViewTextBoxColumn";
+            this.bIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bArealDataGridViewTextBoxColumn
+            // 
+            this.bArealDataGridViewTextBoxColumn.DataPropertyName = "B_Areal";
+            this.bArealDataGridViewTextBoxColumn.HeaderText = "B_Areal";
+            this.bArealDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bArealDataGridViewTextBoxColumn.Name = "bArealDataGridViewTextBoxColumn";
+            this.bArealDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bGadenavnDataGridViewTextBoxColumn
+            // 
+            this.bGadenavnDataGridViewTextBoxColumn.DataPropertyName = "B_Gadenavn";
+            this.bGadenavnDataGridViewTextBoxColumn.HeaderText = "B_Gadenavn";
+            this.bGadenavnDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bGadenavnDataGridViewTextBoxColumn.Name = "bGadenavnDataGridViewTextBoxColumn";
+            this.bGadenavnDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bGadenrDataGridViewTextBoxColumn
+            // 
+            this.bGadenrDataGridViewTextBoxColumn.DataPropertyName = "B_Gade_nr";
+            this.bGadenrDataGridViewTextBoxColumn.HeaderText = "B_Gade_nr";
+            this.bGadenrDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bGadenrDataGridViewTextBoxColumn.Name = "bGadenrDataGridViewTextBoxColumn";
+            this.bGadenrDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bPostnummerDataGridViewTextBoxColumn
+            // 
+            this.bPostnummerDataGridViewTextBoxColumn.DataPropertyName = "B_Postnummer";
+            this.bPostnummerDataGridViewTextBoxColumn.HeaderText = "B_Postnummer";
+            this.bPostnummerDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bPostnummerDataGridViewTextBoxColumn.Name = "bPostnummerDataGridViewTextBoxColumn";
+            this.bPostnummerDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // btypeDataGridViewTextBoxColumn
+            // 
+            this.btypeDataGridViewTextBoxColumn.DataPropertyName = "B_type";
+            this.btypeDataGridViewTextBoxColumn.HeaderText = "B_type";
+            this.btypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.btypeDataGridViewTextBoxColumn.Name = "btypeDataGridViewTextBoxColumn";
+            this.btypeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bværelserDataGridViewTextBoxColumn
+            // 
+            this.bværelserDataGridViewTextBoxColumn.DataPropertyName = "B_værelser";
+            this.bværelserDataGridViewTextBoxColumn.HeaderText = "B_værelser";
+            this.bværelserDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bværelserDataGridViewTextBoxColumn.Name = "bværelserDataGridViewTextBoxColumn";
+            this.bværelserDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // udbudsprisDataGridViewTextBoxColumn
+            // 
+            this.udbudsprisDataGridViewTextBoxColumn.DataPropertyName = "Udbuds_pris";
+            this.udbudsprisDataGridViewTextBoxColumn.HeaderText = "Udbuds_pris";
+            this.udbudsprisDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.udbudsprisDataGridViewTextBoxColumn.Name = "udbudsprisDataGridViewTextBoxColumn";
+            this.udbudsprisDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // handelsprisDataGridViewTextBoxColumn
+            // 
+            this.handelsprisDataGridViewTextBoxColumn.DataPropertyName = "Handels_pris";
+            this.handelsprisDataGridViewTextBoxColumn.HeaderText = "Handels_pris";
+            this.handelsprisDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.handelsprisDataGridViewTextBoxColumn.Name = "handelsprisDataGridViewTextBoxColumn";
+            this.handelsprisDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // handelsdatoDataGridViewTextBoxColumn
+            // 
+            this.handelsdatoDataGridViewTextBoxColumn.DataPropertyName = "Handels_dato";
+            this.handelsdatoDataGridViewTextBoxColumn.HeaderText = "Handels_dato";
+            this.handelsdatoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.handelsdatoDataGridViewTextBoxColumn.Name = "handelsdatoDataGridViewTextBoxColumn";
+            this.handelsdatoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bStatusDataGridViewTextBoxColumn
+            // 
+            this.bStatusDataGridViewTextBoxColumn.DataPropertyName = "B_Status";
+            this.bStatusDataGridViewTextBoxColumn.HeaderText = "B_Status";
+            this.bStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bStatusDataGridViewTextBoxColumn.Name = "bStatusDataGridViewTextBoxColumn";
+            this.bStatusDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // eIDDataGridViewTextBoxColumn2
+            // 
+            this.eIDDataGridViewTextBoxColumn2.DataPropertyName = "EID";
+            this.eIDDataGridViewTextBoxColumn2.HeaderText = "EID";
+            this.eIDDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.eIDDataGridViewTextBoxColumn2.Name = "eIDDataGridViewTextBoxColumn2";
+            this.eIDDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // sælgerIDDataGridViewTextBoxColumn
+            // 
+            this.sælgerIDDataGridViewTextBoxColumn.DataPropertyName = "Sælger_ID";
+            this.sælgerIDDataGridViewTextBoxColumn.HeaderText = "Sælger_ID";
+            this.sælgerIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sælgerIDDataGridViewTextBoxColumn.Name = "sælgerIDDataGridViewTextBoxColumn";
+            this.sælgerIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bOLIGBindingSource1
+            // 
+            this.bOLIGBindingSource1.DataMember = "BOLIG";
+            this.bOLIGBindingSource1.DataSource = this.semesterprojekt1DataSet;
+            // 
+            // semesterprojekt1DataSet
+            // 
+            this.semesterprojekt1DataSet.DataSetName = "semesterprojekt1DataSet";
+            this.semesterprojekt1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label17
             // 
@@ -484,146 +628,6 @@
             this.label6.Size = new System.Drawing.Size(56, 17);
             this.label6.TabIndex = 32;
             this.label6.Text = "Bolig ID";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bIDDataGridViewTextBoxColumn,
-            this.bArealDataGridViewTextBoxColumn,
-            this.bGadenavnDataGridViewTextBoxColumn,
-            this.bGadenrDataGridViewTextBoxColumn,
-            this.bPostnummerDataGridViewTextBoxColumn,
-            this.btypeDataGridViewTextBoxColumn,
-            this.bværelserDataGridViewTextBoxColumn,
-            this.udbudsprisDataGridViewTextBoxColumn,
-            this.handelsprisDataGridViewTextBoxColumn,
-            this.handelsdatoDataGridViewTextBoxColumn,
-            this.bStatusDataGridViewTextBoxColumn,
-            this.eIDDataGridViewTextBoxColumn2,
-            this.sælgerIDDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bOLIGBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 336);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1025, 149);
-            this.dataGridView1.TabIndex = 31;
-            // 
-            // bIDDataGridViewTextBoxColumn
-            // 
-            this.bIDDataGridViewTextBoxColumn.DataPropertyName = "B_ID";
-            this.bIDDataGridViewTextBoxColumn.HeaderText = "B_ID";
-            this.bIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bIDDataGridViewTextBoxColumn.Name = "bIDDataGridViewTextBoxColumn";
-            this.bIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // bArealDataGridViewTextBoxColumn
-            // 
-            this.bArealDataGridViewTextBoxColumn.DataPropertyName = "B_Areal";
-            this.bArealDataGridViewTextBoxColumn.HeaderText = "B_Areal";
-            this.bArealDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bArealDataGridViewTextBoxColumn.Name = "bArealDataGridViewTextBoxColumn";
-            this.bArealDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // bGadenavnDataGridViewTextBoxColumn
-            // 
-            this.bGadenavnDataGridViewTextBoxColumn.DataPropertyName = "B_Gadenavn";
-            this.bGadenavnDataGridViewTextBoxColumn.HeaderText = "B_Gadenavn";
-            this.bGadenavnDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bGadenavnDataGridViewTextBoxColumn.Name = "bGadenavnDataGridViewTextBoxColumn";
-            this.bGadenavnDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // bGadenrDataGridViewTextBoxColumn
-            // 
-            this.bGadenrDataGridViewTextBoxColumn.DataPropertyName = "B_Gade_nr";
-            this.bGadenrDataGridViewTextBoxColumn.HeaderText = "B_Gade_nr";
-            this.bGadenrDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bGadenrDataGridViewTextBoxColumn.Name = "bGadenrDataGridViewTextBoxColumn";
-            this.bGadenrDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // bPostnummerDataGridViewTextBoxColumn
-            // 
-            this.bPostnummerDataGridViewTextBoxColumn.DataPropertyName = "B_Postnummer";
-            this.bPostnummerDataGridViewTextBoxColumn.HeaderText = "B_Postnummer";
-            this.bPostnummerDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bPostnummerDataGridViewTextBoxColumn.Name = "bPostnummerDataGridViewTextBoxColumn";
-            this.bPostnummerDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // btypeDataGridViewTextBoxColumn
-            // 
-            this.btypeDataGridViewTextBoxColumn.DataPropertyName = "B_type";
-            this.btypeDataGridViewTextBoxColumn.HeaderText = "B_type";
-            this.btypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.btypeDataGridViewTextBoxColumn.Name = "btypeDataGridViewTextBoxColumn";
-            this.btypeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // bværelserDataGridViewTextBoxColumn
-            // 
-            this.bværelserDataGridViewTextBoxColumn.DataPropertyName = "B_værelser";
-            this.bværelserDataGridViewTextBoxColumn.HeaderText = "B_værelser";
-            this.bværelserDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bværelserDataGridViewTextBoxColumn.Name = "bværelserDataGridViewTextBoxColumn";
-            this.bværelserDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // udbudsprisDataGridViewTextBoxColumn
-            // 
-            this.udbudsprisDataGridViewTextBoxColumn.DataPropertyName = "Udbuds_pris";
-            this.udbudsprisDataGridViewTextBoxColumn.HeaderText = "Udbuds_pris";
-            this.udbudsprisDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.udbudsprisDataGridViewTextBoxColumn.Name = "udbudsprisDataGridViewTextBoxColumn";
-            this.udbudsprisDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // handelsprisDataGridViewTextBoxColumn
-            // 
-            this.handelsprisDataGridViewTextBoxColumn.DataPropertyName = "Handels_pris";
-            this.handelsprisDataGridViewTextBoxColumn.HeaderText = "Handels_pris";
-            this.handelsprisDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.handelsprisDataGridViewTextBoxColumn.Name = "handelsprisDataGridViewTextBoxColumn";
-            this.handelsprisDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // handelsdatoDataGridViewTextBoxColumn
-            // 
-            this.handelsdatoDataGridViewTextBoxColumn.DataPropertyName = "Handels_dato";
-            this.handelsdatoDataGridViewTextBoxColumn.HeaderText = "Handels_dato";
-            this.handelsdatoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.handelsdatoDataGridViewTextBoxColumn.Name = "handelsdatoDataGridViewTextBoxColumn";
-            this.handelsdatoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // bStatusDataGridViewTextBoxColumn
-            // 
-            this.bStatusDataGridViewTextBoxColumn.DataPropertyName = "B_Status";
-            this.bStatusDataGridViewTextBoxColumn.HeaderText = "B_Status";
-            this.bStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bStatusDataGridViewTextBoxColumn.Name = "bStatusDataGridViewTextBoxColumn";
-            this.bStatusDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // eIDDataGridViewTextBoxColumn2
-            // 
-            this.eIDDataGridViewTextBoxColumn2.DataPropertyName = "EID";
-            this.eIDDataGridViewTextBoxColumn2.HeaderText = "EID";
-            this.eIDDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.eIDDataGridViewTextBoxColumn2.Name = "eIDDataGridViewTextBoxColumn2";
-            this.eIDDataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // sælgerIDDataGridViewTextBoxColumn
-            // 
-            this.sælgerIDDataGridViewTextBoxColumn.DataPropertyName = "Sælger_ID";
-            this.sælgerIDDataGridViewTextBoxColumn.HeaderText = "Sælger_ID";
-            this.sælgerIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sælgerIDDataGridViewTextBoxColumn.Name = "sælgerIDDataGridViewTextBoxColumn";
-            this.sælgerIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // bOLIGBindingSource
-            // 
-            this.bOLIGBindingSource.DataMember = "BOLIG";
-            this.bOLIGBindingSource.DataSource = this.semesterprojekt1DataSet;
-            // 
-            // semesterprojekt1DataSet
-            // 
-            this.semesterprojekt1DataSet.DataSetName = "semesterprojekt1DataSet";
-            this.semesterprojekt1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnboligslet
             // 
@@ -1255,13 +1259,6 @@
             this.textBox24.Size = new System.Drawing.Size(147, 22);
             this.textBox24.TabIndex = 49;
             // 
-            // textBox25
-            // 
-            this.textBox25.Location = new System.Drawing.Point(433, 105);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(147, 22);
-            this.textBox25.TabIndex = 48;
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -1391,6 +1388,13 @@
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(147, 22);
             this.textBox27.TabIndex = 44;
+            // 
+            // textBox25
+            // 
+            this.textBox25.Location = new System.Drawing.Point(433, 105);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(147, 22);
+            this.textBox25.TabIndex = 48;
             // 
             // btnRefresh
             // 
@@ -1634,11 +1638,21 @@
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
+            // semesterprojekt1DataSetBindingSource
+            // 
+            this.semesterprojekt1DataSetBindingSource.DataSource = this.semesterprojekt1DataSet;
+            this.semesterprojekt1DataSetBindingSource.Position = 0;
+            // 
+            // bOLIGBindingSource
+            // 
+            this.bOLIGBindingSource.DataMember = "BOLIG";
+            this.bOLIGBindingSource.DataSource = this.semesterprojekt1DataSetBindingSource;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1188, 569);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.button5);
@@ -1652,6 +1666,7 @@
             this.Controls.Add(this.boligbox);
             this.Controls.Add(this.statistikbox);
             this.Controls.Add(this.køberbox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "REALBOLIG A/S";
             this.Load += new System.EventHandler(this.Form1_Load_1);
@@ -1662,7 +1677,7 @@
             this.boligbox.ResumeLayout(false);
             this.boligbox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bOLIGBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bOLIGBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.semesterprojekt1DataSet)).EndInit();
             this.sælgerbox.ResumeLayout(false);
             this.sælgerbox.PerformLayout();
@@ -1674,6 +1689,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.kØBERBindingSource)).EndInit();
             this.statistikbox.ResumeLayout(false);
             this.statistikbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.semesterprojekt1DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bOLIGBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1696,7 +1713,6 @@
         private System.Windows.Forms.GroupBox køberbox;
         private System.Windows.Forms.GroupBox statistikbox;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnboligslet;
         private System.Windows.Forms.Button btnboligopdater;
         private System.Windows.Forms.Button btnboligopret;
@@ -1803,21 +1819,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sTlfnrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.BindingSource bOLIGBindingSource;
         private semesterprojekt1DataSetTableAdapters.BOLIGTableAdapter bOLIGTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bArealDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bGadenavnDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bGadenrDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bPostnummerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn btypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bværelserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn udbudsprisDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn handelsprisDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn handelsdatoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bStatusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eIDDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sælgerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnVisBoliger;
@@ -1834,6 +1836,23 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.BindingSource bOLIGBindingSource;
+        private System.Windows.Forms.BindingSource semesterprojekt1DataSetBindingSource;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bArealDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bGadenavnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bGadenrDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bPostnummerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn btypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bværelserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn udbudsprisDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn handelsprisDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn handelsdatoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bStatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eIDDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sælgerIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bOLIGBindingSource1;
     }
 }
 
